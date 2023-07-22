@@ -1,0 +1,8 @@
+{
+  "name": "nimby-rails-translation-util",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "SKINMAKER"
+}
