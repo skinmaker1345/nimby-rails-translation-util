@@ -46,6 +46,9 @@ const newFile = Buffer.from(
 						id = value;
 						break;
 					case "msgstr":
+                        if(flagged && translations.has(txt)) {
+                            console.log(`문자열 ${txt}(이)가 수정되어 번역 수정이 필요합니다.\n수정된 영문: ${id}\n번역: ${translations.get(txt)}\n\n`)
+                        }
 						return flagged
 							? `msgstr ${id}`
 							: `msgstr ${translations.get(txt) ?? id}`;
