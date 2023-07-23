@@ -30,9 +30,9 @@ const newFile = Buffer.from(
 	template
 		.split("\n")
 		.map((line) => {
-			if (line.includes("unmodified")) {
+			if (line.startsWith("# unmodified strings")) {
 				flagged = false;
-			} else if (line.includes("modified")) {
+			} else if (line.startsWith("# modified strings")) {
 				flagged = true;
 			}
 			const [key, ...v] = line.split(" ");
